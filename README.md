@@ -110,7 +110,7 @@ Self-hosted, transparent, and privacy-conscious tools for lead scoring, visitor 
 
 ### ⭐ Open-Source Leaderboard (Ranked by Stars)
 
-| 💻 Repository | ⭐ GitHub Stars Badge | 🛠️ Tech Stack | 📜 License | 🎯 Primary Category |
+| 💻 Repository | ⭐ GitHub_Stars_Badge | 🛠️ Tech Stack | 📜 License | 🎯 Primary Category |
 | :--- | :--- | :--- | :--- | :--- |
 | **[egoist/tinytraffic](https://github.com/egoist/tinytraffic)** | [![Stars](https://img.shields.io/github/stars/egoist/tinytraffic?style=social&color=white)](https://github.com/egoist/tinytraffic/stargazers) | Go / DuckDB / ClickHouse | Open Source | 🌐 1st-Party Visitor Analytics & Event Tracking |
 | **[daddydrac/Machine-Learning-For-Predictive-Lead-Scoring](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring)** | [![Stars](https://img.shields.io/github/stars/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring?style=social&color=white)](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring/stargazers) | Python / Scikit-Learn | MIT | 🧠 ML Predictive Lead Conversion Engine |
