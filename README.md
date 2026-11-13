@@ -4,10 +4,12 @@
 
 # ⚡ Awesome Real-Time Customer Intent Signals 🎯
 
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals/pulls)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
 > 🚀 **A curated directory of top Real-Time Customer Intent Signal platforms, B2B buyer intelligence software, reverse-IP de-anonymization services, and open-source lead scoring engines.**  
 > Uncover active buyer research across the dark funnel, detect high-intent accounts in real time, and prioritize sales pipeline conversions.
@@ -28,6 +30,8 @@
   - [⭐ Open-Source Leaderboard (Ranked by Stars)](#-open-source-leaderboard-ranked-by-stars)
   - [🛠️ Detailed Open-Source Profiles](#-detailed-open-source-profiles)
 - [⚖️ Architecture & Data Source Comparison](#-architecture--data-source-comparison)
+- [💖 Support & Community](#-support--community)
+- [📈 Star History](#-star-history)
 - [🤝 Contributing](#-contributing)
 - [📄 License](#-license)
 
@@ -185,6 +189,24 @@ Understanding how intent signals originate is essential when designing your B2B 
 | **2nd-Party Partner Intent** | Review site comparisons (G2, TrustRadius), co-marketing platforms | High purchase intent; buyers are actively evaluating category vendors | High vendor cost; restricted to specific software niches | G2 Buyer Intent, TrustRadius, [trustpilot-outreach-automation](https://github.com/dancolta/trustpilot-outreach-automation) |
 | **3rd-Party Cooperative Intent** | Bidstream analytics, content syndication, publisher network cookies | Uncovers anonymous dark-funnel research across thousands of media sites | Account-level only, probabilistic matching, subject to privacy regulations | [Bombora](https://bombora.com/), [6sense](https://6sense.com/), [Demandbase](https://www.demandbase.com/) |
 | **Algorithmic & Open Intent** | Public hiring trends, tech stack diffs, funding announcements, local ML scoring | Transparent, customizable weights, zero SaaS seat lock-in | Requires self-hosting, data pipelining, and maintenance | [looot-intent](https://github.com/loootai/looot-intent), [LeadGenius](https://github.com/Astoriel/LeadGenius), [ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine) |
+
+---
+
+## 💖 Support & Community
+
+Thank you so much for exploring this curated guide! 🙏 
+
+If this collection has brought value to your project, workflow, or company:
+- ⭐ **Star this repository** to help others discover it across GitHub.
+- 🍴 **Fork the repo** to keep a personal copy or build your own custom intent stack.
+- 📢 **Share it** with colleagues, RevOps engineers, and marketing tech teams.
+- ☕ **Support future development:** If you'd like to support ongoing curation and maintenance, consider buying a coffee via the [GitHub Sponsor Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals&type=date&legend=top-left)
 
 ---
 
