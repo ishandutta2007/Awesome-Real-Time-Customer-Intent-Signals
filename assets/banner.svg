@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="360" style="background:#090d16; border-radius:16px; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; overflow:hidden;">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070a12" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1035" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <!-- Signal Pulse Radial Gradient -->
+    <radialGradient id="pulseGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.75" stroke-opacity="0.3" />
+    </pattern>
+
+    <!-- Subtle blur -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    /* CSS Keyframe Animations */
+    @keyframes pulseCircle {
+      0% { r: 10px; opacity: 0.8; }
+      50% { r: 55px; opacity: 0.2; }
+      100% { r: 90px; opacity: 0; }
+    }
+    @keyframes waveDash {
+      0% { stroke-dashoffset: 0; }
+      100% { stroke-dashoffset: -120; }
+    }
+    @keyframes floatParticle {
+      0% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+      50% { transform: translateY(-15px) translateX(10px); opacity: 0.8; }
+      100% { transform: translateY(0px) translateX(0px); opacity: 0.2; }
+    }
+    @keyframes scanLine {
+      0% { transform: translateY(-100px); opacity: 0; }
+      50% { opacity: 0.4; }
+      100% { transform: translateY(380px); opacity: 0; }
+    }
+    @keyframes badgeGlow {
+      0%, 100% { filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4)); }
+      50% { filter: drop-shadow(0 0 12px rgba(129, 140, 248, 0.8)); }
+    }
+
+    .pulse-ring-1 {
+      animation: pulseCircle 3.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+    }
+    .pulse-ring-2 {
+      animation: pulseCircle 3.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite 1.2s;
+    }
+    .pulse-ring-3 {
+      animation: pulseCircle 3.5s cubic-bezier(0.2, 0.8, 0.2, 1) infinite 2.4s;
+    }
+    .data-flow-line {
+      stroke-dasharray: 8, 8;
+      animation: waveDash 2.5s linear infinite;
+    }
+    .particle {
+      animation: floatParticle 4s ease-in-out infinite;
+    }
+    .scan-beam {
+      animation: scanLine 6s ease-in-out infinite;
+    }
+    .brand-glow {
+      animation: badgeGlow 4s ease-in-out infinite;
+    }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+
+  <!-- Dynamic Radar / Signal Emission Area (Upper Right, safely backgrounded) -->
+  <g transform="translate(1020, 160)" opacity="0.45">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4,4" />
+    <circle cx="0" cy="0" r="70" fill="none" stroke="#818cf8" stroke-width="1" stroke-dasharray="3,3" />
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#c084fc" stroke-width="1" />
+    <circle class="pulse-ring-1" cx="0" cy="0" r="15" fill="none" stroke="#38bdf8" stroke-width="2" />
+    <circle class="pulse-ring-2" cx="0" cy="0" r="15" fill="none" stroke="#818cf8" stroke-width="2" />
+    <circle class="pulse-ring-3" cx="0" cy="0" r="15" fill="none" stroke="#c084fc" stroke-width="2" />
+    <circle cx="0" cy="0" r="6" fill="#38bdf8" filter="url(#glow)" />
+  </g>
+
+  <!-- Flowing Signal Paths in background -->
+  <path class="data-flow-line" d="M 0 100 Q 300 140 600 70 T 1200 120" fill="none" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" />
+  <path class="data-flow-line" d="M 0 260 Q 350 200 750 280 T 1200 210" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.25" style="animation-direction:reverse;" />
+
+  <!-- Subtle scanner bar sweep in background -->
+  <rect class="scan-beam" x="0" y="0" width="1200" height="2" fill="url(#accentGrad)" />
+
+  <!-- Floating Signal Nodes/Particles -->
+  <circle class="particle" cx="150" cy="70" r="3" fill="#38bdf8" style="animation-delay: 0.5s;" />
+  <circle class="particle" cx="340" cy="290" r="2.5" fill="#c084fc" style="animation-delay: 1.8s;" />
+  <circle class="particle" cx="720" cy="80" r="3.5" fill="#818cf8" style="animation-delay: 2.2s;" />
+  <circle class="particle" cx="900" cy="310" r="3" fill="#38bdf8" style="animation-delay: 1.1s;" />
+
+  <!-- FOREGROUND CONTENT: Header Badges, Titles, Descriptions & Metrics (Guaranteed Crystal Clear) -->
+  <g transform="translate(80, 0)">
+    
+    <!-- Top Pill Badge -->
+    <g transform="translate(0, 50)" class="brand-glow">
+      <rect x="0" y="0" width="310" height="32" rx="16" fill="#1e293b" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.6" />
+      <circle cx="16" cy="16" r="4" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="30" y="21" fill="#94a3b8" font-size="12" font-weight="600" letter-spacing="1">REAL-TIME BUYER INTENT STACK</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="132" fill="#ffffff" font-size="36" font-weight="800" letter-spacing="-0.5">
+      Awesome Real-Time Customer Intent Signals
+    </text>
+
+    <!-- Subtitle / Hook -->
+    <text x="0" y="172" fill="#94a3b8" font-size="16" font-weight="400">
+      Curated Commercial SaaS Platforms &amp; Open-Source Engines for In-Market B2B Detection
+    </text>
+
+    <!-- Key Capability Cards / Pills in Foreground -->
+    <g transform="translate(0, 215)">
+      <!-- Card 1: 3rd-Party Intent -->
+      <g transform="translate(0, 0)">
+        <rect width="185" height="68" rx="10" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
+        <circle cx="24" cy="25" r="8" fill="#0284c7" fill-opacity="0.3" />
+        <text x="24" y="29" fill="#38bdf8" font-size="12" text-anchor="middle" font-weight="bold">📡</text>
+        <text x="42" y="28" fill="#f8fafc" font-size="13" font-weight="700">3rd-Party Intent</text>
+        <text x="20" y="50" fill="#64748b" font-size="11">Publisher Co-ops &amp; ABM</text>
+      </g>
+
+      <!-- Card 2: 1st-Party De-anonymization -->
+      <g transform="translate(200, 0)">
+        <rect width="205" height="68" rx="10" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
+        <circle cx="24" cy="25" r="8" fill="#4f46e5" fill-opacity="0.3" />
+        <text x="24" y="29" fill="#818cf8" font-size="12" text-anchor="middle" font-weight="bold">🔍</text>
+        <text x="42" y="28" fill="#f8fafc" font-size="13" font-weight="700">De-anonymization</text>
+        <text x="20" y="50" fill="#64748b" font-size="11">Reverse-IP &amp; Live Tracking</text>
+      </g>
+
+      <!-- Card 3: AI Lead Scoring -->
+      <g transform="translate(420, 0)">
+        <rect width="195" height="68" rx="10" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
+        <circle cx="24" cy="25" r="8" fill="#9333ea" fill-opacity="0.3" />
+        <text x="24" y="29" fill="#c084fc" font-size="12" text-anchor="middle" font-weight="bold">⚡</text>
+        <text x="42" y="28" fill="#f8fafc" font-size="13" font-weight="700">Predictive Scoring</text>
+        <text x="20" y="50" fill="#64748b" font-size="11">Tri-Dimensional Fit/Intent</text>
+      </g>
+
+      <!-- Card 4: Open Source -->
+      <g transform="translate(630, 0)">
+        <rect width="195" height="68" rx="10" fill="url(#cardGrad)" stroke="#334155" stroke-width="1" />
+        <circle cx="24" cy="25" r="8" fill="#059669" fill-opacity="0.3" />
+        <text x="24" y="29" fill="#34d399" font-size="12" text-anchor="middle" font-weight="bold">💻</text>
+        <text x="42" y="28" fill="#f8fafc" font-size="13" font-weight="700">Open-Source Ready</text>
+        <text x="20" y="50" fill="#64748b" font-size="11">Self-Hosted &amp; Zero Lock-in</text>
+      </g>
+    </g>
+
+    <!-- Bottom Metadata Bar -->
+    <g transform="translate(0, 310)">
+      <text x="0" y="16" fill="#475569" font-size="12" font-weight="500">
+        ⚡ Live Signals • 🎯 Account-Based Marketing (ABM) • 🛡️ CCPA/GDPR Compliant Architecture • 🌟 Star if Useful!
+      </text>
+    </g>
+  </g>
+</svg>

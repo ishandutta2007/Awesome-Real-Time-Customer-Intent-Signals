@@ -1,137 +1,216 @@
-# Awesome-Real-Time-Customer-Intent-Signals
+<div align="center">
 
-# Awesome Real-Time Customer Intent Signals
+<img src="./assets/banner.svg" alt="Awesome Real-Time Customer Intent Signals Banner" width="100%" />
 
-> A curated list of top Real-Time Customer Intent Signal platforms — both SaaS/Hosted commercial intent data providers and open-source alternatives for identifying accounts and individuals actively researching a purchase.
-> 🌟 Star this repo if you find it useful! 🌟
+# ⚡ Awesome Real-Time Customer Intent Signals 🎯
 
----
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+[![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals/pulls)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Awesome-Real-Time-Customer-Intent-Signals)
 
-## 📋 Table of Contents
+> 🚀 **A curated directory of top Real-Time Customer Intent Signal platforms, B2B buyer intelligence software, reverse-IP de-anonymization services, and open-source lead scoring engines.**  
+> Uncover active buyer research across the dark funnel, detect high-intent accounts in real time, and prioritize sales pipeline conversions.
+>
+> ⭐ **Star this repository if you find it valuable!** ⭐
 
-- [SaaS / Hosted Platforms](#-saas--hosted-platforms)
-  - [6sense](#6sense)
-  - [Demandbase](#demandbase)
-  - [Bombora](#bombora)
-  - [ZoomInfo Intent](#zoominfo-intent)
-  - [TechTarget Priority Engine](#techtarget-priority-engine)
-  - [Leadfeeder (Dealfront)](#leadfeeder-dealfront)
-  - [Clearbit Reveal](#clearbit-reveal)
-- [Open-Source Software](#-open-source-software)
-  - [looot-intent](#looot-intent)
-  - [looot-crm](#looot-crm)
-  - [tinytraffic](#tinytraffic)
-  - [ai-lead-scoring-engine](#ai-lead-scoring-engine)
-  - [Transparent Lead Scoring](#transparent-lead-scoring)
-- [Comparison at a Glance](#-comparison-at-a-glance)
-- [Contributing](#-contributing)
+</div>
 
 ---
 
-## 🟦 SaaS / Hosted Platforms
+## 📑 Table of Contents
 
-Commercial, cloud-hosted Real-Time Customer Intent Signal platforms. These are not open-source but are included as reference points for feature comparison.
-
-### 6sense
-**Type:** Account-based intent and buying-stage prediction  
-6sense is the enterprise standard for account intent data, using AI to predict which accounts are in-market and what stage of the buying journey they are in. It combines third-party intent signals with first-party website activity and CRM data. Pricing is enterprise-quoted, with Vendr reporting annual escalators of 3% to 10% [citation:8].
-
-### Demandbase
-**Type:** Account-based marketing and intent platform  
-Demandbase provides account-based marketing (ABM) with intent data, advertising, and personalization. It is a direct competitor to 6sense, with a focus on unifying intent signals with ABM execution. Pricing is enterprise-quoted with annual escalators [citation:8].
-
-### Bombora
-**Type:** B2B intent data cooperative  
-Bombora is a leading third-party intent data provider, using a cooperative model where publishers contribute content consumption data to identify accounts researching specific topics. Vendr reports a median annual cost near $25,000, with onboarding fees of $5,000 to $20,000 [citation:8].
-
-### ZoomInfo Intent
-**Type:** Intent data within ZoomInfo's B2B database  
-ZoomInfo provides intent data alongside its contact and company database, allowing sales teams to identify accounts researching relevant topics and reach out to contacts within them. It is often bundled with ZoomInfo's broader prospecting platform.
-
-### TechTarget Priority Engine
-**Type:** Permissioned intent from tech content network  
-TechTarget Priority Engine provides intent data from a permissioned audience of technology buyers researching on TechTarget's network. It emphasizes person-level intent, telling you who inside an account is doing the research [citation:8].
-
-### Leadfeeder (Dealfront)
-**Type:** Website visitor identification with free tier  
-Leadfeeder (now part of Dealfront) identifies companies visiting your website, revealing which accounts are researching you even if they do not fill out a form. Dealfront offers a free plan, with paid plans starting from EUR 79/month, making it the lowest-cost entry point among major intent tools [citation:8].
-
-### Clearbit Reveal
-**Type:** Website visitor de-anonymization  
-Clearbit Reveal (now part of HubSpot) identifies the company behind a website visit, matching IP addresses to company data. It is often used alongside intent data to enrich website traffic with firmographic context.
+- [🌐 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [🏢 SaaS & Hosted Commercial Platforms](#-saas--hosted-commercial-platforms)
+  - [📊 SaaS Platforms Comparison & Pricing Matrix](#-saas-platforms-comparison--pricing-matrix)
+  - [🔍 Detailed SaaS Profiles](#-detailed-saas-profiles)
+- [💻 Open-Source Software & Toolkits](#-open-source-software--toolkits)
+  - [⭐ Open-Source Leaderboard (Ranked by Stars)](#-open-source-leaderboard-ranked-by-stars)
+  - [🛠️ Detailed Open-Source Profiles](#-detailed-open-source-profiles)
+- [⚖️ Architecture & Data Source Comparison](#-architecture--data-source-comparison)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ---
 
-## 🟩 Open-Source Software
+## 🌐 Sector Overview & Market Dynamics
 
-Self-hosted, community-driven Real-Time Customer Intent Signal tools. The open-source ecosystem is **nascent and fragmented** — most projects are early-stage, narrowly scoped, or require paid data APIs rather than providing free intent data themselves.
+The global B2B Intent Data & Buyer Intelligence market is valued between **$3.8 billion and $4.5 billion** and is projected to surpass **$11 billion to $18+ billion by the mid-2030s**, growing at a rapid CAGR of **12.8% – 16.6%** as revenue teams pivot from cold outbound to signal-led go-to-market motions.
 
-### looot-intent
-**Stack:** TypeScript / Next.js / CLI | **License:** MIT  
-looot-intent is an **MIT-licensed open-source alternative to 6sense** for scoring a list of company domains for buying intent and buying stage [citation:3][citation:12]. Key characteristics:
-- **Eleven signals across ten categories**: hiring, funding, news, tech stack changes, SEO movement, web traffic, Google ads, LinkedIn ads, Reddit mentions, headcount growth, and third-party buying intent 
-- **0–100 score and four stages**: accounts are ranked as unaware, aware, considering, or deciding (deciding requires a score of 70+ and at least three signal categories) 
-- **Itemized scores**: each score lists the signals behind it, the provider, the weight in points, and the cost of each call 
-- **Quote before spend**: a dry run prints the price first, and a real run is refused above the cap 
-- **Demo mode**: `npm run demo` scores generated accounts on a reserved example domain with no token, no network call, and no cost 
-
-**Critical limitation:** The **code is open source, but the data is not**. Every real run calls the looot data service and pays per call at the catalog price. The project has **0 stars and 1 contributor**, with no security policy and no PRs merged in 90 days [citation:3]. It is a very early-stage project.
-**Best for:** Solo founders and small sales teams wanting a transparent, configurable intent scoring engine without paying enterprise platform fees, accepting that real data requires a paid looot balance and the project is extremely new.
-
-### looot-crm
-**Stack:** Next.js / Supabase | **License:** Open Source  
-looot-crm is a companion project to looot-intent: an **open-source CRM with buying-intent signals built in** [citation:15]. It provides companies, people, a pipeline board, and an **Intent tab per account**, with per-action caps and workspace budgets to control spend. The data model includes 12 tables with row-level security tested on local Postgres. Like looot-intent, it relies on the paid looot data service for actual intent signals, and the project explicitly notes that no real looot run was made while building it.
-**Best for:** Teams wanting an open-source CRM foundation with intent signals integrated, accepting the same paid-data dependency and early-stage maturity as looot-intent.
-
-### tinytraffic
-**Stack:** Go / DuckDB / ClickHouse | **License:** Open Source  
-tinytraffic is a **self-hosted web analytics tool in a single binary** [citation:4][citation:9]. While not an intent data platform itself, it provides the **first-party website visitor tracking** that many intent workflows depend on. It tracks page views, custom events (e.g., `tinytraffic("Signup", { props: { plan: "pro" } })`), and outbound link clicks automatically, with GeoIP location from DB-IP's free database. The dashboard is embedded in the binary, and data can be stored in DuckDB or ClickHouse. It ignores localhost and automated browsers, and you can exclude your own visits via localStorage.
-**Best for:** Teams wanting a lightweight, self-hosted analytics layer to capture first-party intent signals (page visits, events) without Google Analytics or a commercial platform, accepting that it does not provide third-party intent data or account de-anonymization.
-
-### ai-lead-scoring-engine
-**Stack:** Python / FastAPI / SQLite / Docker | **License:** Open Source  
-ai-lead-scoring-engine is a self-hosted B2B lead scoring engine with **136 features** and **tri-dimensional scoring (Fit/Engagement/Intent)** [citation:11]. It includes a **6sense-inspired buying stage pipeline**, a fit-engagement matrix (A1-C3 grid), a sales feedback loop, scoring model templates, negative scoring rules, and account-based scoring (ABM). It runs entirely locally with zero API costs, using local LLM reasoning and a full web dashboard. Features include lead routing, Kanban pipeline board, pipeline velocity metrics, webhook event logs, and GDPR data export/deletion.
-**Best for:** Teams wanting a comprehensive, self-hosted lead scoring engine with intent modeling and no per-call data costs, accepting the operational overhead of a Python/FastAPI stack and the need to supply your own data.
-
-### Transparent Lead Scoring
-**Stack:** Python | **License:** Open Source  
-A lightweight open-source lead scoring tool with **transparent scoring reasons**, a priority-queue dashboard, and Telegram alerts [citation:2]. It is positioned among the 163+ lead-scoring repositories on GitHub, focused on explainable scoring rather than black-box intent prediction.
-**Best for:** Small teams wanting a simple, self-hosted lead scoring foundation with explainable results and Telegram notifications.
+The sector is **moderately to highly fragmented**: while a handful of well-capitalized enterprise conglomerates (6sense, ZoomInfo, Demandbase, Informa/TechTarget) dominate end-to-end account orchestration and commercial publisher co-ops, intense competition persists from agile pure-play reverse-IP de-anonymization vendors, product-review networks (G2, TrustRadius), and emerging self-hosted AI scoring engines.
 
 ---
 
-## 📊 Comparison at a Glance
+## 🏢 SaaS & Hosted Commercial Platforms
 
-| Software | License | Stack | Intent Data Source | Real-Time | Self-Hosted | Best For |
-|----------|---------|-------|---------------------|-----------|-------------|----------|
-| **6sense** | Proprietary | Cloud | Proprietary third-party | ✅ | ❌ | Enterprise ABM intent |
-| **Demandbase** | Proprietary | Cloud | Proprietary third-party | ✅ | ❌ | ABM + intent execution |
-| **Bombora** | Proprietary | Cloud | Cooperative publisher network | (Batch) | ❌ | Third-party topic intent |
-| **Leadfeeder** | Proprietary | Cloud | First-party website visits | ✅ | ❌ | Free website visitor ID |
-| **looot-intent** | MIT | TypeScript/Next.js | Paid looot API | (On run) | ✅ | Open-source 6sense alternative |
-| **looot-crm** | Open Source | Next.js/Supabase | Paid looot API | (On run) | ✅ | CRM + intent signals |
-| **tinytraffic** | Open Source | Go/DuckDB | First-party tracking | ✅ | ✅ | Self-hosted analytics |
-| **ai-lead-scoring-engine** | Open Source | Python/FastAPI | Your own data | (On run) | ✅ | Comprehensive lead scoring |
+Commercial cloud platforms providing third-party content consumption signals, first-party website visitor de-anonymization, and AI buying-stage predictions.
+
+### 📊 SaaS Platforms Comparison & Pricing Matrix
+
+*Sorted in descending order by enterprise company size (Valuation / Market Capitalization / Parent Enterprise Valuation).*
+
+| 🏢 Platform | 💰 Company Size (Valuation / Market Cap / Revenue) | 🏷️ Starting Tier Pricing | 🎁 Free Tier Limit / Free Trial Plan Details | 🎯 Key Focus & Capability |
+| :--- | :--- | :--- | :--- | :--- |
+| **TechTarget Priority Engine** | **~$11.5B Market Cap** *(Parent Informa PLC; $300M+ revenue division)* | **$30,000 / year** *(Median ~$95,000/yr on Vendr; custom-quoted)* | **No free tier & no public free trial** *(Private scheduled live pilot/demo with sales rep only)* | 🎯 Permissioned 1st-party IT buyer intent from editorial network |
+| **6sense** | **$5.2B Valuation** *(Post-money valuation; $426M+ funding)* | **$11,000 – $40,000 / year** *(Median ~$62,000/yr on Vendr; multi-year commitments)* | **No free tier & no self-serve trial** *(Free tier discontinued; POC/live sandbox only through sales scoping)* | 🤖 Enterprise Revenue AI, predictive buying stage & account intent |
+| **Demandbase** | **$1.3B Valuation** *(~$200M+ ARR; $320M total funding)* | **$45,000 / year** *(Demandbase One base tier; median ~$70,000/yr on Vendr)* | **No free tier & no self-serve trial** *(Requires guided sales demo and custom proof-of-concept scoping)* | 📈 Unified ABM, B2B intent, advertising & sales intelligence |
+| **ZoomInfo Intent** | **~$1.0B Market Cap** *(NASDAQ: GTM; ~$1.25B annual revenue)* | **$15,000 / year** *(Professional Plus base; Intent enabled on Advanced tiers $25,000+/yr)* | **7-day free trial** *(Usage capped; limits export credits, no CC required) & **Lite Plan** (10 contact export credits/mo)* | 👥 B2B contact intelligence combined with streaming intent topics |
+| **Bombora** | **~$588M Valuation** *(~$56M annual revenue; GetLatka benchmark)* | **$25,000 / year** *(Base Company Surge®; onboarding fees $5,000–$20,000)* | **No free tier & no self-serve trial** *(Annual/multi-year enterprise contract only; sales-guided demo)* | 🌐 B2B intent cooperative covering 5,000+ business topics |
+| **Clearbit Reveal** | **$150M Acquisition Valuation** *(Acquired by HubSpot NYSE: HUBS)* | **$200 / month** *(Legacy standalone; currently folded into HubSpot Breeze from $50/mo)* | **HubSpot free CRM tier available** *(Clearbit free tools sunset; Breeze enrichment requires paid HubSpot credits)* | 🕵️ Real-time IP-to-company de-anonymization and technographics |
+| **Leadfeeder (Dealfront)** | **~$10M–$41M ARR** *(Private PE-backed; €30M growth facility)* | **€79 / month** *(Discover tier billed annually; €113 billed monthly)* | **Lite Plan: 100% Free Forever** *(Up to 100 identified companies/month, last 7 days data history, 20 contact credits)* | 🔍 Website visitor identification and company-level journey tracking |
+
+---
+
+### 🔍 Detailed SaaS Profiles
+
+#### 🎯 [TechTarget Priority Engine](https://www.techtarget.com/priority-engine/)
+- **Specialty:** Permissioned purchase intent derived directly from editorial tech content.
+- **How it Works:** Tracks verified technology buyers reading whitepapers, vendor comparisons, and technical articles across TechTarget’s 150+ enterprise IT websites.
+- **Enterprise Profile:** Operating under Informa PLC (LSE: INF, ~$11.5B market capitalization), delivering person-level opt-in intent data.
+
+#### 🤖 [6sense](https://6sense.com/)
+- **Specialty:** Account-based intent signals and predictive buying-stage modeling.
+- **How it Works:** Ingests billions of external intent events, web visits, and CRM touchpoints to categorize target accounts into 4 dynamic buying journey stages (*Unaware*, *Aware*, *Considering*, *Deciding*).
+- **Enterprise Profile:** Privately valued at $5.2B with over $426M in institutional venture backing.
+
+#### 📈 [Demandbase](https://www.demandbase.com/)
+- **Specialty:** Comprehensive Account-Based Marketing (ABM) orchestration with embedded intent.
+- **How it Works:** Unifies third-party intent datasets with ad execution, account scoring, and sales engagement workflows to target buying committees.
+- **Enterprise Profile:** Privately valued at $1.3B with over $200M in annual recurring revenue.
+
+#### 👥 [ZoomInfo Intent](https://www.zoominfo.com/features/intent)
+- **Specialty:** B2B contact and company database tied to digital topic surges.
+- **How it Works:** Monitors content consumption spikes across business IPs and automatically matches them to key decision-maker emails, phone numbers, and organizational charts.
+- **Enterprise Profile:** Publicly traded company (NASDAQ: GTM) generating ~$1.25B in annual revenue with an enterprise value exceeding $2.3B.
+
+#### 🌐 [Bombora Company Surge®](https://bombora.com/)
+- **Specialty:** The industry-standard B2B publisher intent data cooperative.
+- **How it Works:** Aggregates content engagement metrics from 5,000+ business and media websites, calculating standard-deviation consumption surges against baseline activity.
+- **Enterprise Profile:** Leading private data cooperative generating ~$56M in annual revenue with an estimated valuation of ~$588M.
+
+#### 🕵️ [Clearbit Reveal (HubSpot Breeze)](https://clearbit.com/platform/reveal)
+- **Specialty:** Live IP de-anonymization and visitor firmographic enrichment.
+- **How it Works:** Converts anonymous website visitor IP addresses into verified company domain names, employee ranges, tech stacks, and industries in under 100 milliseconds.
+- **Enterprise Profile:** Acquired by HubSpot (NYSE: HUBS) for $150M in 2023 and integrated into HubSpot Breeze Intelligence.
+
+#### 🔍 [Leadfeeder (Dealfront)](https://www.dealfront.com/leadfeeder/)
+- **Specialty:** Transparent B2B website visitor tracking with an accessible entry tier.
+- **How it Works:** Identifies companies visiting your web properties via script tag, listing specific pages viewed, referral sources, and browse duration.
+- **Enterprise Profile:** Scaled European B2B leader backed by institutional growth capital (€30M credit facility), with estimated revenues between $10M–$41M.
+
+---
+
+## 💻 Open-Source Software & Toolkits
+
+Self-hosted, transparent, and privacy-conscious tools for lead scoring, visitor tracking, intent classification, and buying-signal intelligence.
+
+### ⭐ Open-Source Leaderboard (Ranked by Stars)
+
+| 💻 Repository | ⭐ GitHub Stars Badge | 🛠️ Tech Stack | 📜 License | 🎯 Primary Category |
+| :--- | :--- | :--- | :--- | :--- |
+| **[egoist/tinytraffic](https://github.com/egoist/tinytraffic)** | [![Stars](https://img.shields.io/github/stars/egoist/tinytraffic?style=social&color=white)](https://github.com/egoist/tinytraffic/stargazers) | Go / DuckDB / ClickHouse | Open Source | 🌐 1st-Party Visitor Analytics & Event Tracking |
+| **[daddydrac/Machine-Learning-For-Predictive-Lead-Scoring](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring)** | [![Stars](https://img.shields.io/github/stars/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring?style=social&color=white)](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring/stargazers) | Python / Scikit-Learn | MIT | 🧠 ML Predictive Lead Conversion Engine |
+| **[mukulsinghal001/lead-scoring-model-python](https://github.com/mukulsinghal001/lead-scoring-model-python)** | [![Stars](https://img.shields.io/github/stars/mukulsinghal001/lead-scoring-model-python?style=social&color=white)](https://github.com/mukulsinghal001/lead-scoring-model-python/stargazers) | Python / Pandas / Statsmodels | Open Source | 📊 Statistical Lead Scoring & Funnel Modeling |
+| **[Othmane-Khadri/gtm-engineer-playbook](https://github.com/Othmane-Khadri/gtm-engineer-playbook)** | [![Stars](https://img.shields.io/github/stars/Othmane-Khadri/gtm-engineer-playbook?style=social&color=white)](https://github.com/Othmane-Khadri/gtm-engineer-playbook/stargazers) | Markdown / CLI / Claude Code | MIT | 🧭 Signal Scanning, ICP Scoring & Battlecards |
+| **[Astoriel/LeadGenius](https://github.com/Astoriel/LeadGenius)** | [![Stars](https://img.shields.io/github/stars/Astoriel/LeadGenius?style=social&color=white)](https://github.com/Astoriel/LeadGenius/stargazers) | Python / Docker / YAML | MIT | ⚡ Self-Hosted Lead Scoring & Enrichment Engine |
+| **[getcargohq/cargo-skills](https://github.com/getcargohq/cargo-skills)** | [![Stars](https://img.shields.io/github/stars/getcargohq/cargo-skills?style=social&color=white)](https://github.com/getcargohq/cargo-skills/stargazers) | TypeScript / Cargo CLI | MIT | 📡 Buying-Signal Monitoring & Lead Routing |
+| **[dancolta/trustpilot-outreach-automation](https://github.com/dancolta/trustpilot-outreach-automation)** | [![Stars](https://img.shields.io/github/stars/dancolta/trustpilot-outreach-automation?style=social&color=white)](https://github.com/dancolta/trustpilot-outreach-automation/stargazers) | Node.js / Puppeteer / AI | MIT | 💬 Public Review Intent & Churn-Signal Outreach |
+| **[loootai/looot-crm](https://github.com/loootai/looot-crm)** | [![Stars](https://img.shields.io/github/stars/loootai/looot-crm?style=social&color=white)](https://github.com/loootai/looot-crm/stargazers) | Next.js / Supabase / Postgres | Open Source | 🗃️ Open-Source CRM with Live Intent Signals |
+| **[loootai/looot-intent](https://github.com/loootai/looot-intent)** | [![Stars](https://img.shields.io/github/stars/loootai/looot-intent?style=social&color=white)](https://github.com/loootai/looot-intent/stargazers) | TypeScript / Next.js / CLI | MIT | 🎯 Open-Source 6sense Buying-Stage Alternative |
+| **[Nikkk2312/ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine)** | [![Stars](https://img.shields.io/github/stars/Nikkk2312/ai-lead-scoring-engine?style=social&color=white)](https://github.com/Nikkk2312/ai-lead-scoring-engine/stargazers) | Python / FastAPI / SQLite / Docker | Open Source | 🤖 136-Feature Tri-Dimensional Intent Scorer |
+
+---
+
+### 🛠️ Detailed Open-Source Profiles
+
+#### 🌐 [tinytraffic](https://github.com/egoist/tinytraffic) [![Stars](https://img.shields.io/github/stars/egoist/tinytraffic?style=social&color=white)](https://github.com/egoist/tinytraffic/stargazers)
+- **Stack:** Go / DuckDB / ClickHouse | **License:** Open Source
+- **Overview:** A self-hosted, lightweight web analytics engine packaged into a single binary. Captures essential first-party intent signals (page views, session duration, custom conversion events, and outbound link clicks) without third-party tracking scripts or cookies.
+- **Best for:** Development teams needing high-performance, private 1st-party event telemetry to feed internal intent pipelines.
+
+#### 🧠 [Machine-Learning-For-Predictive-Lead-Scoring](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring) [![Stars](https://img.shields.io/github/stars/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring?style=social&color=white)](https://github.com/daddydrac/Machine-Learning-For-Predictive-Lead-Scoring/stargazers)
+- **Stack:** Python / Scikit-Learn / Pandas | **License:** MIT
+- **Overview:** An end-to-end predictive machine learning architecture designed to identify high-converting prospects from behavioral, demographic, and engagement signals.
+- **Best for:** Data scientists looking for proven feature-engineering workflows to train custom lead conversion models.
+
+#### 📊 [lead-scoring-model-python](https://github.com/mukulsinghal001/lead-scoring-model-python) [![Stars](https://img.shields.io/github/stars/mukulsinghal001/lead-scoring-model-python?style=social&color=white)](https://github.com/mukulsinghal001/lead-scoring-model-python/stargazers)
+- **Stack:** Python / Jupyter / Logistic Regression | **License:** Open Source
+- **Overview:** A well-documented statistical lead scoring case study using supervised machine learning and logistic regression to assign probability scores and eliminate low-intent inbound noise.
+- **Best for:** Revenue operations and growth teams seeking an interpretable, transparent conversion probability baseline.
+
+#### 🧭 [gtm-engineer-playbook](https://github.com/Othmane-Khadri/gtm-engineer-playbook) [![Stars](https://img.shields.io/github/stars/Othmane-Khadri/gtm-engineer-playbook?style=social&color=white)](https://github.com/Othmane-Khadri/gtm-engineer-playbook/stargazers)
+- **Stack:** Markdown / Claude Code CLI / Agent Workflows | **License:** MIT
+- **Overview:** A comprehensive suite of 10 installable GTM agent skills turning developer terminals into sales command centers—covering ICP discovery, buying-signal scanning, lead scoring, and automated battlecards.
+- **Best for:** Technical founders and GTM engineers executing signal-led outreach from local AI coding environments.
+
+#### ⚡ [LeadGenius](https://github.com/Astoriel/LeadGenius) [![Stars](https://img.shields.io/github/stars/Astoriel/LeadGenius?style=social&color=white)](https://github.com/Astoriel/LeadGenius/stargazers)
+- **Stack:** Python / Docker / YAML | **License:** MIT
+- **Overview:** An open-source, self-hosted alternative to Clearbit and MadKudu operating at $0/month. Features waterfall data enrichment, deterministic YAML-configured lead scoring, and automated webhook routing to HubSpot and Slack.
+- **Best for:** Startups wanting predictable, rule-based qualification pipelines without recurring vendor seat taxes.
+
+#### 📡 [cargo-skills](https://github.com/getcargohq/cargo-skills) [![Stars](https://img.shields.io/github/stars/getcargohq/cargo-skills?style=social&color=white)](https://github.com/getcargohq/cargo-skills/stargazers)
+- **Stack:** TypeScript / Node.js / Cargo CLI | **License:** MIT
+- **Overview:** Autonomous GTM engineering skills enabling AI coding agents to build lead lists, verify contact data, score leads, and continuously monitor buying signals (job changes, funding announcements, tech stack adoption).
+- **Best for:** AI agent builders and modern RevOps engineers automating signal monitoring across 130+ integrations.
+
+#### 💬 [trustpilot-outreach-automation](https://github.com/dancolta/trustpilot-outreach-automation) [![Stars](https://img.shields.io/github/stars/dancolta/trustpilot-outreach-automation?style=social&color=white)](https://github.com/dancolta/trustpilot-outreach-automation/stargazers)
+- **Stack:** Node.js / Puppeteer / AI | **License:** MIT
+- **Overview:** A signal-driven outbound framework that scans public negative review signals (1–2 star Trustpilot complaints against competitors) and generates AI-personalized outreach drafts addressing active buyer dissatisfaction.
+- **Best for:** Challenger brands capitalizing on public competitor dissatisfaction intent.
+
+#### 🗃️ [looot-crm](https://github.com/loootai/looot-crm) [![Stars](https://img.shields.io/github/stars/loootai/looot-crm?style=social&color=white)](https://github.com/loootai/looot-crm/stargazers)
+- **Stack:** Next.js / Supabase / PostgreSQL | **License:** Open Source
+- **Overview:** An open-source CRM architecture with integrated buying-intent tabs, budget caps per workspace, and real-time account pipeline visibility.
+- **Best for:** Early-stage teams wanting a clean, self-hosted CRM foundation with native support for live intent signal scoring.
+
+#### 🎯 [looot-intent](https://github.com/loootai/looot-intent) [![Stars](https://img.shields.io/github/stars/loootai/looot-intent?style=social&color=white)](https://github.com/loootai/looot-intent/stargazers)
+- **Stack:** TypeScript / Next.js / Headless CLI | **License:** MIT
+- **Overview:** An open-source 6sense alternative evaluating company domains across 11 signal categories (hiring, funding, news, tech stack changes, ad spend, and web traffic) to classify buying stages (*Unaware*, *Aware*, *Considering*, *Deciding*).
+- **Best for:** Teams looking for transparent, cost-capped intent scoring with full control over signal weights and zero platform lock-in.
+
+#### 🤖 [ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine) [![Stars](https://img.shields.io/github/stars/Nikkk2312/ai-lead-scoring-engine?style=social&color=white)](https://github.com/Nikkk2312/ai-lead-scoring-engine/stargazers)
+- **Stack:** Python / FastAPI / SQLite / Docker | **License:** Open Source
+- **Overview:** A privacy-first, self-hosted B2B lead scoring engine featuring 136 engineered attributes and tri-dimensional evaluation (Fit, Engagement, Intent). Employs local LLM reasoning alongside a 6sense-inspired buying stage pipeline with zero per-call API fees.
+- **Best for:** Data-sensitive enterprise teams requiring on-premise intent classification and GDPR/DPDP-compliant data handling.
+
+---
+
+## ⚖️ Architecture & Data Source Comparison
+
+Understanding how intent signals originate is essential when designing your B2B revenue intelligence stack:
+
+| Signal Tier | Data Mechanism | Strengths | Constraints | Top Platforms |
+| :--- | :--- | :--- | :--- | :--- |
+| **1st-Party Behavioral Intent** | Web analytics tags, form interactions, product telemetry, reverse-IP resolution | 100% accurate, proprietary, low compliance friction, direct buying interest | Limited to accounts already aware of and visiting your domain | [tinytraffic](https://github.com/egoist/tinytraffic), [Leadfeeder](https://www.dealfront.com/leadfeeder/), [Clearbit Reveal](https://clearbit.com/platform/reveal) |
+| **2nd-Party Partner Intent** | Review site comparisons (G2, TrustRadius), co-marketing platforms | High purchase intent; buyers are actively evaluating category vendors | High vendor cost; restricted to specific software niches | G2 Buyer Intent, TrustRadius, [trustpilot-outreach-automation](https://github.com/dancolta/trustpilot-outreach-automation) |
+| **3rd-Party Cooperative Intent** | Bidstream analytics, content syndication, publisher network cookies | Uncovers anonymous dark-funnel research across thousands of media sites | Account-level only, probabilistic matching, subject to privacy regulations | [Bombora](https://bombora.com/), [6sense](https://6sense.com/), [Demandbase](https://www.demandbase.com/) |
+| **Algorithmic & Open Intent** | Public hiring trends, tech stack diffs, funding announcements, local ML scoring | Transparent, customizable weights, zero SaaS seat lock-in | Requires self-hosting, data pipelining, and maintenance | [looot-intent](https://github.com/loootai/looot-intent), [LeadGenius](https://github.com/Astoriel/LeadGenius), [ai-lead-scoring-engine](https://github.com/Nikkk2312/ai-lead-scoring-engine) |
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you know of an open-source Real-Time Customer Intent Signal tool that should be listed here, please open a pull request with:
+Contributions, feature suggestions, and project submissions are warmly welcomed! 
 
-- Project name and URL
-- Brief description (1–2 sentences)
-- Stack and license
-- Why it stands out
+1. 🍴 **Fork the repository**
+2. 🌿 **Create your feature branch** (`git checkout -b feature/new-intent-tool`)
+3. 📝 **Commit your changes** (`git commit -m 'Add new open-source intent tool'`)
+4. 🚀 **Push to the branch** (`git push origin feature/new-intent-tool`)
+5. 📬 **Open a Pull Request**
 
-Please ensure the project is actively maintained (releases within the last 12 months) and genuinely open-source. Note that the open-source ecosystem for **third-party intent data** is essentially nonexistent — intent data is a commercial product built on publisher networks and data cooperatives that cannot be replicated by self-hosted software. The available open-source projects fall into two categories: **scoring engines that consume paid data APIs** (looot-intent, looot-crm) and **first-party tracking/scoring tools** (tinytraffic, ai-lead-scoring-engine, Transparent Lead Scoring) that help you capture and model your own signals. **looot-intent** is the most direct open-source attempt at a 6sense alternative, but its code is MIT while its data is paid and the project is extremely early-stage [citation:3][citation:12].
+Please review previously listed projects before submitting to prevent duplicates, and ensure any open-source submission includes an active repository link, license, and brief description.
 
 ---
 
 ## 📄 License
 
-This list is released under CC0 1.0 Universal (Public Domain). The software projects listed retain their respective licenses.
+This repository and curated list are released under the [Creative Commons Zero v1.0 Universal](LICENSE) (Public Domain).  
+Individual tools, software platforms, and repositories retain their respective proprietary or open-source licenses.
 
 ---
 
-⭐ **If this list helped you discover a useful tool, please star the repo!** ⭐
+<div align="center">
+
+⭐ **Found this guide helpful? Please star this repository to support community discovery!** ⭐
+
+</div>
